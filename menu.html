@@ -391,6 +391,8 @@ body {
 <script src="js/parallax.min.js"></script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 	  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 	  <!-- Initialize Swiper -->
@@ -447,16 +449,15 @@ body.addEventListener("click" , e =>{
   </script>
 
 <script>
-  $(document).ready(function(){
+ $(document).ready(function() {
     // Handle click on paging links
-    $('.tm-paging-link').click(function(e){
+    $('.tm-paging-link').click(function(e) {
       e.preventDefault();
-      
-      var page = $(this).text().toLowerCase();
+      var page = $(this).text().toLowerCase().trim();
       $('.tm-gallery-page').addClass('hidden');
       $('#tm-gallery-page-' + page).removeClass('hidden');
       $('.tm-paging-link').removeClass('active');
-      $(this).addClass("active");
+      $(this).addClass('active');
     });
   });
 </script>
